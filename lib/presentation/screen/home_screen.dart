@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'main_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -11,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const Center(child: Text('main', style: TextStyle(fontSize: 22))),
+    const MainScreen(),
     const Center(child: Text('books', style: TextStyle(fontSize: 22))),
     const Center(child: Text('account', style: TextStyle(fontSize: 22))),
   ];
