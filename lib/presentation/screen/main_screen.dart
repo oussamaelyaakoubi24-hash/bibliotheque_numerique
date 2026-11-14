@@ -38,16 +38,92 @@ class MainScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'Créer dossier +',
-                        style: TextStyle(
-                          color: Color(0xFF6F88FF),
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 16),
+
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF171C2E),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Icon(
+                          //hada icon dyal neurosicience
+                          Icons.psychology,
+                          color: Color(0xFF8EA2FF),
+                          size: 32,
                         ),
+                        CircleAvatar(
+                          radius: 4,
+                          backgroundColor: Color(0xFFBAC3FD),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12), //masafa bin l3onwan o licon
+                    const Text(
+                      'Neurosciences',
+                      style: TextStyle(
+                        color: Color(0xFFE3E1ED),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
                       ),
+                    ),
+                    const SizedBox(height: 4),
+                    const Text(
+                      'Cognition & Perception',
+                      style: TextStyle(color: Color(0xFFA0A5B9), fontSize: 13),
+                    ),
+                    const SizedBox(height: 14), //masafa bin ns o takhrikh
+                    Row(
+                      children: [
+                        // lcadre dyal date
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF2B3042),
+                            borderRadius: BorderRadius.circular(20),
+                          ), //date
+                          child: const Text(
+                            '18 doc.',
+                            style: TextStyle(
+                              color: Color(0xFFE3E1ED),
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8), // مسافة أفقية بين الشارتين
+                        // lcadre dyal fiches
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF2B3042),
+                            borderRadius: BorderRadius.circular(20),
+                          ), //fiche
+                          child: const Text(
+                            '4 fiches',
+                            style: TextStyle(
+                              color: Color(0xFFBAC3FD),
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
