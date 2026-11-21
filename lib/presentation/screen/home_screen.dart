@@ -30,11 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'main'),
-          BottomNavigationBarItem(icon: Icon(Icons.menu_book), label: 'books'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Accueil'),
+          BottomNavigationBarItem(icon: Icon(Icons.menu_book), label: 'Livres'),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'my account',
+            label: 'Mon compte',
           ),
         ],
       ),

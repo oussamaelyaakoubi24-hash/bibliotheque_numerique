@@ -20,30 +20,69 @@ class MainScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: const [
-                        Icon(
-                          Icons.folder_copy_outlined,
-                          color: Color(0xFF6F88FF),
-                          size: 22,
-                        ),
-                        SizedBox(width: 8),
-                        Text(
-                          'Matières & Séminaires',
-                          style: TextStyle(
-                            color: Color(0xFFE3E1ED),
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
+                    Expanded(
+                      child: Row(
+                        children: const [
+                          Icon(
+                            Icons.folder_copy_outlined,
+                            color: Color(0xFF6F88FF),
+                            size: 22,
                           ),
+                          SizedBox(width: 8),
+                          Flexible(
+                            child: Text(
+                              'Matières & Séminaires',
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                color: Color(0xFFE3E1ED),
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            backgroundColor: const Color(0xFF171C2E),
+                            title: const Text('Nouveau dossier'),
+                            content: const TextField(
+                              decoration: InputDecoration(
+                                hintText: 'Nom de la matière...',
+                              ),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: const Text('Annuler'),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: const Text('Créer'),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Créer dossier +',
+                        style: TextStyle(
+                          color: Color(0xFF6F88FF),
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
                         ),
-                      ],
+                      ),
                     ),
                   ],
                 ),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16),
-
+                padding: const EdgeInsets.all(16),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: const Color(0xFF171C2E),
@@ -93,7 +132,7 @@ class MainScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                             color: const Color(0xFF2B3042),
                             borderRadius: BorderRadius.circular(20),
-                          ), //date
+                          ), //nombre dyal document
                           child: const Text(
                             '18 doc.',
                             style: TextStyle(

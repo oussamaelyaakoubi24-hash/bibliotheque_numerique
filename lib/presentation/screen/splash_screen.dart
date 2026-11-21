@@ -6,6 +6,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    if (!mounted) return;
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             children: [
               const SizedBox(height: 150),
-              Image.asset('images/images.jpg', width: 200, height: 200),
+              Image.asset('images/images.png', width: 200, height: 200),
               const Text('BIFSO', style: TextStyle(fontSize: 24)),
               const SizedBox(height: 10),
               const Text(
